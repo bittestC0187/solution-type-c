@@ -39,6 +39,16 @@ public class Main {
 	}
 	
 	public static boolean checkAnswer(int answer) {
-		return true;
+		if (randomNumber != answer) { // 같지 않으면
+			if (randomNumber > answer)
+				min = answer;
+			else
+				max = answer;
+			count++;	
+			return false;
+		} // 같으면
+		else { // 정답일 경우
+			return true;
+		}
 	}
 }
