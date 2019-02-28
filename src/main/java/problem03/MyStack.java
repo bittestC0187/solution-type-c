@@ -13,16 +13,12 @@ public class MyStack {
 	
 	public void push(String item) {
 		if (full()) {
-///			System.out.println("buffer length : " + buffer.length);
 			String[] tempBuffer = new String[buffer.length + 1];
 			for (int i=0; i<buffer.length; i++) {
-//				System.out.println("buffer 엘리먼트 : " + buffer[i]);
 				tempBuffer[i] = buffer[i]; 
 			}
 			buffer = tempBuffer;
 			size++;
-//			System.out.println("변경 된 buffer length : " +buffer.length);
-//			System.out.println("top : " + top);
 		} 
 		buffer[++top] = item;
 	}
